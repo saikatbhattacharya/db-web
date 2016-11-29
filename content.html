@@ -7,7 +7,7 @@
   <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="author" content="Grayrids">
-  <title>Pluto - Material UI Inspired Bootstrap Template</title>
+  <title>দক্ষিণের বারান্দা</title>
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome CSS -->
@@ -56,13 +56,7 @@
     <div class="navbar-header text-center">
       <a class="navbar-brand logo-right" href="javascript:void(0)"><i class="mdi-image-timelapse"></i></a>
     </div>
-    <ul class="nav navbar-nav main-navigation">
-      <li class="active"><a href="/">প্রচ্ছদ</a></li>
-      <li><a href="/">সূচীপত্র</a></li>
-      <li><a href="/">চিঠি-চাপাটি</a></li>
-      <li><a href="/">সম্পাদকেরা</a></li>
-      <li><a href="/">যোগাযোগ</a></li>
-    </ul>
+
     <button class="close-button" id="close-button">Close Menu</button>
   </div>
 
@@ -76,11 +70,12 @@
             style="background-color: #009688;padding:0px;">
             <div class="container">
               <div class="navbar-header">
-                <a class="logo-left " href="/"><i class="mdi-image-timelapse"></i>Pluto</a>
+                <a class="logo-left " href="/"><img src="./img/logo_white.png" style="width: 200px;" /></a>
               </div>
               <div class="navbar-right">
-                <button class="menu-icon" id="open-button">
-                  </button>
+                <a href="/" class="btn btn-primary">
+                  <i class="mdi-action-home"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -106,37 +101,40 @@
         </div>
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-          <a class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Comments</a>
-        </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="x in comments track by $index" style="margin-bottom: 2%;">
-          <div class="commentDivider"></div>
-          <div class="commentBlock">
-            <h4>{{x.name}}:</h4><br/>
-            <h6>{{x.content}}</h6>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" +{{href}} target="_blank" class="btn btn-lg btn-primary wow fadeInUp"
+              data-wow-duration="1000ms" data-wow-delay="400ms">Share in FaceBook</a>
           </div>
+
         </div>
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2%;">
+            <h2>Comments: </h2>
+            <div class="commentDivider"></div>
+            <div class="commentBlock" ng-repeat="x in comments track by $index">
+              <h4>{{x.name}}:</h4><br/>
+              <h6>{{x.content}}</h6>
+            </div>
+          </div>
         </div>
         <div class="row">
           <form class="form-horizontal">
-    <div class="form-group">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <input type="text" class="form-control" id="commentorName" placeholder="আপনার নাম" ng-model="user.name">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <input type="text" class="form-control" id="comment" placeholder="মন্তব্য" ng-model="user.content">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <a class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms" ng-click="submit()">Submit</a>
-      </div>
-    </div>
-  </form>
+            <div class="form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="commentorName" placeholder="আপনার নাম" ng-model="user.name">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="comment" placeholder="মন্তব্য" ng-model="user.content">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <a class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms" ng-click="submit()">Submit</a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -174,9 +172,7 @@
         <div class="row">
           <div class="col-md-12">
             <p class="copyright-text">
-              © Pluto 2015 All right reserved. Designed and Developed by
-              <a href="http://graygrids.com/">
-                GrayGrids
+              © Dakkhiner Baranda 2015 All right reserved
               </a>
             </p>
           </div>
@@ -207,6 +203,7 @@
       }
 
     function dbController($scope,$http,$location) {
+      var href = window.location.href;
       var location = $location.absUrl().split("?")[1].split("=")[1];//58324e93bd966f61a59b6aec
       var url = 'https://api.mlab.com/api/1/databases/dakkhinerbaranda/collections/content/'+location+'?apiKey=FoffkWZUhseXYN3tH_kpgL0JlRdMC-vm';
     

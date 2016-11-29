@@ -12,8 +12,8 @@ body {
 }
 .btn-border {
   background: transparent;
-  border: 1px solid #fff;
-  color: #fff !important;
+  border: 1px solid #009688;
+  color: #009688 !important;
 }
 .btn-border:hover {
   background: rgba(255, 255, 255, 0.08);

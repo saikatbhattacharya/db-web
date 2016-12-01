@@ -89,14 +89,14 @@
       <div class="container">
         <div class="section-header">
           <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">{{title}}</h1>
-          <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">{{author}}</h2>
+          <h2 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms" style="font-size: 20px;">{{author}}</h2>
           <br/>
           <div class="commentDivider"></div>
         </div>
         <div class="row">
           <div id="loading" class="loader text-center"></div>
           <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="x in content track by $index">
-            {{x}}
+            <h4 style="line-height: 150%;">{{x}}</h4>
           </div>
         </div>
         <div class="row">

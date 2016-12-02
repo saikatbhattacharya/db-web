@@ -109,7 +109,7 @@
 
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2%;">
-            <h2>Comments: </h2>
+            <h2>Comments ({{commentCount}}): </h2>
             <div class="commentDivider"></div>
             <div class="commentBlock" ng-repeat="x in comments track by $index">
               <h4>{{x.name}}:</h4><br/>
@@ -118,6 +118,7 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
           <form class="form-horizontal">
             <div class="form-group">
               <div class="col-md-12 col-sm-12 col-xs-12">
@@ -136,6 +137,7 @@
             </div>
           </form>
         </div>
+        </div>
       </div>
     </section>
 
@@ -144,28 +146,32 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
-
+              <h3>Contact us</h3>
+              <ul>
+                <li>Flat no. 207, Symphony, XS Real Helios City, Chennai 603103, India</li>
+                <li>+91 9940621284</li>
+                <li>dakkhinerbaranda@gmail.com</li>
+              </ul>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-
+              
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-
+              
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h3>Find us on</h3>
-              <a class="social" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a class="social" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a class="social" href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+              <a class="social" href="https://www.facebook.com/DakkhinerBaranda/" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a class="social" href="https://plus.google.com/u/0/104532665072920281104" target="_blank"><i class="fa fa-google-plus"></i></a>
             </div>
           </div>
-        </div>
-      </div>
+        </div>  
+      </div>      
       <!-- Go to Top Link -->
-      <a href="/" class="btn btn-primary back-to-top">
-        <i class="mdi-action-home"></i>
+      <a href="#" class="btn btn-primary back-to-top">
+      <i class=" mdi-hardware-keyboard-arrow-up"></i>
       </a>
-    </section>
+    </section> 
 
     <section id="copyright">
       <div class="container">
@@ -213,6 +219,7 @@
             $scope.title = response.contentheading;
             $scope.content = response.contentvalue.split('\n');
             $scope.comments = response.comments;
+            $scope.commentCount = response.comments.length;
         });
 
         $scope.submit = function(){

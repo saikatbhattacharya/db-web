@@ -632,6 +632,18 @@ a:focus {
   background-color: #fff;
   border-color: #fff;
 }
+#aboutus {
+  width: 100%;
+  background: url(../img/about-us.jpg);
+}
+#aboutus .section-title {
+  color: #fff;
+  font-size: 46px;
+}
+#aboutus .section-subtitle {
+  color: #fff;
+  font-size: 13px;
+}
 #counter {
   background: #ecf0f1;
 }

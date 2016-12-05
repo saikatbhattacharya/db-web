@@ -118,6 +118,13 @@
     font-size: 12px;
     line-height: 20px;
   }
+  #aboutus .section-title {
+    font-size: 22px;
+  }
+  #aboutus .section-subtitle {
+    font-size: 12px;
+    line-height: 20px;
+  }
   #clients .client-item-wrapper {
     margin-bottom: 30px;
   }
